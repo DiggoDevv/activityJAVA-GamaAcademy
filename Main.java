@@ -17,7 +17,8 @@ public class Main {
     }
 
     public static void atividade3(int idade){
-        if(idade >= 16){
+        int idadeMinima = 16;
+        if(idade >= idadeMinima){
             System.out.println("\nVocê pode realizar o pedido!!");
         } else {
             System.out.println("\nVocê não pode efetuar a compra");
@@ -89,6 +90,23 @@ public class Main {
                     racaoDia + " dias" );
         }
     }
+    public static void atividade8(int valorTotal){
+        int minimoParcelas = 20;
+        float numeroParcelas = (valorTotal / minimoParcelas);
+        int numeroMaxParcelas = 6;
+        if (numeroParcelas > numeroMaxParcelas) {
+            numeroParcelas = numeroMaxParcelas;
+        }
+        double valorParcela = valorTotal / numeroParcelas;
+        if(valorTotal < minimoParcelas){
+            System.out.println("quantidade minima não obtida para compra parcelada");
+        }else{           
+            System.out.println("Número máximo de parcelas: " + numeroParcelas);
+        System.out.println("Valor de cada parcela: R$ " + valorParcela);
+   
+        }
+         }
+    
 
         public static void main (String[]args){
             String nome = "Rodrigo";
@@ -109,5 +127,6 @@ public class Main {
 
             atividade7(4, 2);
             /*peso ração por kg*/
+            atividade8(240);
         }
     }
